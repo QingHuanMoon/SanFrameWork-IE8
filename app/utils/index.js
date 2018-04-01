@@ -7,5 +7,5 @@ require('es6-promise/auto');
 /**
  * 功能扩展包
  * */
-window.$ = require('./tools/jquery.min');
+// window.$ = require('./tools/jquery.min');
 window.$ajax = require('axios')
