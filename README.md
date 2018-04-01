@@ -30,7 +30,7 @@
 
 ## 介绍
 这个一个以webpack2为基础，启用tree-shaking新技术,为打包支持到低版本的`webpack2`实验性脚手架。</br>
-本项目使用[`avalon2`](https://github.com/RubyLouvre/avalon)作为演示框架。</br>
+本项目使用[`sanFrameWork`](https://github.com/RubyLouvre/avalon)作为演示框架。</br>
 
 ### 关于【Webpack】
 1. 服务端使用Express。需要注意的是，只有一个目的那就是提供了`webpack-dev-middleware` 和 `webpack-hot-middleware`（代码热替换）。使用自定义的Express程序替换[webpack-dev-server](https://github.com/webpack/webpack-dev-server)，让它更容易实现universal 渲染和为了不使这个包过于庞大。
@@ -95,7 +95,7 @@
 ### 依赖配置
 1. 首先clone项目
 ```bash
-$ git clone https://github.com/sayll/ie-webpack-start.git
+$ git clone https://github.com/QingHuanMoon/SanFrameWork-IE8.git
 $ cd ie-webpack-start
 ```
 * 由于国内有一堵高墙的存在建议国内用户切换源地址：
