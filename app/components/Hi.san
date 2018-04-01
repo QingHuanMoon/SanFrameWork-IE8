@@ -1,0 +1,26 @@
+<template>
+    <div class="box">
+        {{ msg }}
+    </div>
+</template>
+
+
+<script>
+    module.exports =
+        {
+            initData: function () {
+                return {
+                    'msg': 'this is hi component!'
+                }
+            }
+        }
+</script>
+
+<style scoped>
+    .box
+    {
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+    }
+</style>
