@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="box">
-            {{ msg }}
+            <p>{{ msg }}</p>
         </div>
     </div>
 </template>
@@ -12,7 +12,7 @@
         {
             initData:function () {
                 return {
-                    msg: 'PcPageOne'
+                    msg: 'This is MbPageTwo'
                 }
             }
         }

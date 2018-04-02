@@ -1,18 +1,15 @@
 <template>
-    <div>
-        <div class="box">
-            <p>{{ msg }}</p>
-        </div>
+    <div class="box">
+        <p>{{ msg }}</p>
     </div>
 </template>
-
 
 <script>
     module.exports =
         {
-            initData:function () {
+            initData:function() {
                 return {
-                    msg: 'This is MbPageOne'
+                    msg: 'This is PcPageOne'
                 }
             }
         }

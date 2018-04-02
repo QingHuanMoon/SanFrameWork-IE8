@@ -6,4 +6,15 @@
  */
 module.exports = function (index, direction, anchorLink) {
     console.log('离开的页面序号是'+index+',滚动方向是'+direction+',锚链接名称是' + anchorLink);
+    switch(index)
+    {
+        case 1:
+            $('.p1 .pc .box').velocity({
+                marginLeft:-50,
+                opacity: 1,
+            },{
+                duration:1000,
+            })
+            break;
+    }
 }
