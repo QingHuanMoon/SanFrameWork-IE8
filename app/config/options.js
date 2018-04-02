@@ -31,6 +31,8 @@ module.exports = {
     paddingTop:0,
     //    与底部的距离
     paddingBottom:0,
+//    滚动条
+    scrollBar:true,
 //    滚动到某一屏后的回调
     afterLoad:afterload,
 //    离开某一屏前的回调

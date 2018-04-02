@@ -1,7 +1,11 @@
 <template>
     <div id="dowebok">
-        <div class="section">第一屏</div>
-        <div class="section">第二屏</div>
+        <div class="section">
+            <mbpageone></mbpageone>
+        </div>
+        <div class="section">
+            <mbpagetwo></mbpagetwo>
+        </div>
         <div class="section">第三屏</div>
         <div class="section">第四屏</div>
     </div>
@@ -10,16 +14,15 @@
 
 
 <script>
-
-    var hello = require('../components/Hello.san');
-    var hi = require('../components/Hi.san');
+    var mbPageOne = require('../components/Mb/PageOne/One.san');
+    var mbPageTwo = require('../components/Mb/PageTwo/Two.san');
     var options = require('../config/options.js')
     module.exports =
         {
             components:
                 {
-                    hello:hello,
-                    hi:hi,
+                    mbpageone: mbPageOne,
+                    mbpagetwo: mbPageTwo,
                 },
             compiled:function () {
                 $(function () {
