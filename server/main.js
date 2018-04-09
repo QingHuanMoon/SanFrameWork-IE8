@@ -6,6 +6,8 @@ const base          = require('../config/webpack/base/base'),
 const history = require('connect-history-api-fallback');
 
 const app = express();
+app.use(history());
+
 // Apply gzip compression
 // const compress      = require('compression')
 // app.use(compress());
@@ -16,14 +18,14 @@ const app = express();
 if (process.env.NODE_ENV === 'development') {
   const compiler = webpack(webpackConfig);
 
-  app.use(require('webpack-dev-middleware')(compiler, {
+
+    app.use(require('webpack-dev-middleware')(compiler, {
     publicPath: files.cdnPath,
     quiet     : true,
     stats     : {colors: true}
   }));
 
   app.use(require('webpack-hot-middleware')(compiler));
-  app.use(history())
 
 	app.use('/', express.static(files.buildPath));
 

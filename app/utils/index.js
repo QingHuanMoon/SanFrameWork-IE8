@@ -11,7 +11,5 @@ require('es6-promise/auto');
 window.$ajax = require('axios')
 window.San = require('san')
 window.DataTypes = San.DataTypes
-window.sanRouter = require('san-router');
-window.router = sanRouter.router;
-window.Link = sanRouter.Link;
+
 

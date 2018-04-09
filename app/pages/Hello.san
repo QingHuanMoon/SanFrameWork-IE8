@@ -1,7 +1,6 @@
 <template>
     <div>
         {{ msg }}
-        <router-link to="/a">试试看</router-link>
     </div>
 </template>
 
@@ -12,9 +11,6 @@
                 return {
                     msg : 'Hello Component'
                 }
-            },
-            components:{
-                'router-link':Link
             }
         }
 </script>
