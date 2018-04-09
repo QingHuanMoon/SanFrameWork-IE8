@@ -3,31 +3,35 @@ const base          = require('../config/webpack/base/base'),
       webpackConfig = require('../config/webpack/webpack.dev'),
       express       = require('express'),
       webpack       = require('webpack');
+const history = require('connect-history-api-fallback');
 
 const app = express();
 // Apply gzip compression
-//const compress      = require('compression')
-//app.use(compress());
+// const compress      = require('compression')
+// app.use(compress());
 
 /** -----------------------------------
  * Apply Webpack HMR Middleware
  * */
 if (process.env.NODE_ENV === 'development') {
   const compiler = webpack(webpackConfig);
-  
+
   app.use(require('webpack-dev-middleware')(compiler, {
     publicPath: files.cdnPath,
     quiet     : true,
     stats     : {colors: true}
   }));
-  
-  app.use(require('webpack-hot-middleware')(compiler));
-	
-	app.use('/', express.static(files.buildPath));
-	
-	app.use('/', express.static(files.staticPath));
 
-  app.listen(base.devPort, () => {
+  app.use(require('webpack-hot-middleware')(compiler));
+  app.use(history())
+
+	app.use('/', express.static(files.buildPath));
+
+
+    app.use('/', express.static(files.staticPath));
+
+
+    app.listen(base.devPort, () => {
     console.log(`open localhost:${base.devPort}`);
   });
 }

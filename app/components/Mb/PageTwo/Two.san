@@ -8,13 +8,14 @@
 
 
 <script>
+    var sanStore = require('san-store')
     module.exports =
         {
             initData:function () {
                 return {
                     msg: 'This is MbPageTwo'
                 }
-            }
+            },
         }
 </script>
 

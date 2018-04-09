@@ -2,6 +2,7 @@
     <div>
         <div class="box">
             <p>{{ msg }}</p>
+            <input type="text" value="{= inputdata =}">
         </div>
     </div>
 </template>
@@ -12,7 +13,8 @@
         {
             initData:function () {
                 return {
-                    msg: 'This is MbPageOne'
+                    msg: 'This is MbPageOne',
+                    inputdata:'hello'
                 }
             }
         }
