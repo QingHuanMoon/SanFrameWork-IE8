@@ -1,7 +1,10 @@
 const base      = require('../base/base'),
       files     = require('../base/files'),
+      path      = require('path'),
       HappyPack = require('happypack'),
-      webpack   = require('webpack');
+      webpack   = require('webpack'),
+      PrerenderPlugin = require('prerender-spa-plugin'),
+      Renderer        = PrerenderPlugin.PuppeteerRenderer;
 
 function cHappypack(id, loaders) {
   return new HappyPack({
@@ -19,6 +22,11 @@ function cHappypack(id, loaders) {
 
 module.exports = [
   new webpack.NoEmitOnErrorsPlugin(),
+  new PrerenderPlugin({
+      staticDir: path.join(__dirname, '../../../build'),
+      outputDir: path.join(__dirname, '../../../build/prerendered'),
+      routes: [ '/', '/a',],
+  }),
   new webpack.DefinePlugin({
     'process.env': {
       NODE_ENV: JSON.stringify(process.env.NODE_ENV),

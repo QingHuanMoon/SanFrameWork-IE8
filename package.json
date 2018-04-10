@@ -69,6 +69,7 @@
   "dependencies": {
     "avalon2": "^2.2.4",
     "es5-shim": "^4.5.9",
+    "prerender-spa-plugin": "^3.0.0",
     "regularjs": "^0.6.0-beta.10",
     "san-store": "^1.1.0"
   },
